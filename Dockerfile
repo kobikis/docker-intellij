@@ -22,13 +22,13 @@ RUN apt-get update && \
 
 ENV IDEA_JDK /usr/lib/jvm/java-8-oracle
 
-ENTRYPOINT ["/opt/idea-IC-183.4886.37/bin/idea.sh"]
+ENTRYPOINT ["/opt/idea-IC-183.5153.38/bin/idea.sh"]
 
 USER root
 
-ADD https://download-cf.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz /opt/idea.tar.gz
+ADD https://download-cf.jetbrains.com/idea/ideaIU-2018.3.3.tar.gz /opt/idea.tar.gz
 
-RUN tar --extract --verbose --directory /opt --file /opt/idea.tar.gz && rm -rf /opt/idea-IC-183.4886.37/jre64 && rm -f /opt/idea.tar.gz
+RUN tar --extract --verbose --directory /opt --file /opt/idea.tar.gz && rm -rf /opt/idea-IU-183.5153.38/jre64 && rm -f /opt/idea.tar.gz
 
 RUN useradd -ms /bin/bash intellij
 

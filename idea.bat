@@ -9,7 +9,7 @@ set PULL="docker pull %IMAGE%"
 echo %PULL%
 %PULL%
 
-set CMD=docker run --detach=true -it --name IntelliJ --rm -v %INTELLIJ_CONFIG_DIR%:/home/intellij/.IdeaIC2018.3/ -v %MOUNT_DIR%:/home/kobi -v %GRADLE_DIR%:/home/kobi/.gradle -v %M2_DIR%:/home/kobi/.m2 -e DISPLAY=%IP%:0.0 %IMAGE%
+set CMD=docker run --detach=true -it --name IntelliJ --rm -v %INTELLIJ_CONFIG_DIR%:/home/intellij/.IdeaIC2018.3/ -v %MOUNT_DIR%:/home/intellij -v %GRADLE_DIR%:/home/intellij/.gradle -v %M2_DIR%:/home/intellij/.m2 -e DISPLAY=%IP%:0.0 %IMAGE%
 
 echo %CMD%
 %CMD%
