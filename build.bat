@@ -1,0 +1,1 @@
+docker build --pull --tag kobikis/intellij-local:latest .
