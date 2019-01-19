@@ -22,7 +22,7 @@ RUN apt-get update && \
 
 ENV IDEA_JDK /usr/lib/jvm/java-8-oracle
 
-ENTRYPOINT ["/opt/idea-IC-183.5153.38/bin/idea.sh"]
+ENTRYPOINT ["/opt/idea-IU-183.5153.38/bin/idea.sh"]
 
 USER root
 
