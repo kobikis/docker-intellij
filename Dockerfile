@@ -15,6 +15,7 @@ RUN apt-get update && \
   apt-key adv --keyserver keyserver.ubuntu.com --recv-keys EEA14886 && \
   apt-get update && \
   apt-get install -y git && \
+  apt-get install -y maven && \
   apt-get install -y gradle && \
   apt-get install -y --no-install-recommends oracle-java8-installer oracle-java8-set-default && \
   apt-get clean all
@@ -29,7 +30,7 @@ ADD https://download-cf.jetbrains.com/idea/ideaIC-2018.3.2.tar.gz /opt/idea.tar.
 
 RUN tar --extract --verbose --directory /opt --file /opt/idea.tar.gz && rm -rf /opt/idea-IC-183.4886.37/jre64 && rm -f /opt/idea.tar.gz
 
-RUN useradd -ms /bin/bash kobi
+RUN useradd -ms /bin/bash intellij
 
-USER kobi
-WORKDIR /home/kobi
+USER intellij
+WORKDIR /home/intellij
